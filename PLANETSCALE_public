@@ -1,0 +1,13 @@
+import requests
+
+def get_planetscale_databases():
+    planet_id = "xj67g7z8epk0"
+    planetscale_api_oauth_or_pwd = " pscale_tkn_bojd9E_Vs38C0ejMR0DxjsRcY_OaGBw2uHvFpc2IpZE"
+    plantescale_oauth = 'pscale_app_secret_bDWfiN-Lg9M5RNLflQh7OUXkCNf48H3KbC5aNfrD1vw'
+    url = "https://api.planetscale.com/v1/databases"
+    headers = {"Authorization": f"Bearer {planetscale_api_oauth_or_pwd}"}
+    response = requests.get(url, headers=headers)
+    return response.json()
+
+# Example usage
+# get_planetscale_databases()
